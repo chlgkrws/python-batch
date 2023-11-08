@@ -1,0 +1,34 @@
+# source table 1
+schema_db=careersystem
+table=career_sample
+select:
+column1
+column2
+column3
+column4
+column5 as sample_text
+column6
+column7
+column8
+column9
+column10
+where:
+column1 is not null or column2 is not null
+column4 is not null
+---
+# target table 1
+schema_db=careersystemprodmock
+table=career_sample
+delete_before_execution=true
+insert:
+column1={column1}
+column2={column2}
+column3={column3}
+column4={column4}
+column5={sample_text}
+column6={column6}
+column7={column7}
+column8={column8}
+column9={column9}
+column10={column10}
+---
